@@ -1,0 +1,589 @@
+AU, ------- NODES -------
+AU, Node tag-pair: 'alt_name::Semáforos Hospital Metropolitano' (x 1).
+AU, Node tag-pair: 'amenity::bus_station' (x 5).
+AU, Node tag-pair: 'bicycle::yes' (x 3).
+AU, Node tag-pair: 'bus::yes' (x 1049).
+AU, Node tag-pair: 'button_operated::yes' (x 3).
+AU, Node tag-pair: 'crossing::traffic_signals' (x 12).
+AU, Node tag-pair: 'crossing::uncontrolled' (x 2).
+AU, Node tag-pair: 'crossing_ref::Calle colón' (x 1).
+AU, Node tag-pair: 'dip:type::drain' (x 6).
+AU, Node tag-pair: 'exit_to::ENEL' (x 1).
+AU, Node tag-pair: 'exit_to::Pista Suburbana' (x 1).
+AU, Node tag-pair: 'exit_to::UNAN' (x 1).
+AU, Node tag-pair: 'ford::intermittent' (x 1).
+AU, Node tag-pair: 'ford::yes' (x 1).
+AU, Node tag-pair: 'highway::bus_stop' (x 20).
+AU, Node tag-pair: 'highway::crossing' (x 18).
+AU, Node tag-pair: 'highway::stop' (x 14).
+AU, Node tag-pair: 'highway::traffic_signals' (x 201).
+AU, Node tag-pair: 'local_ref::119' (x 1).
+AU, Node tag-pair: 'mapillary::Opg29GLz1vMJ6Eodzcm78g' (x 1).
+AU, Node tag-pair: 'material::concrete' (x 1).
+AU, Node tag-pair: 'name::Parada Ruta 165' (x 1).
+AU, Node tag-pair: 'name::Semáforos Claro Villa Fontana' (x 2).
+AU, Node tag-pair: 'name::Semáforos Club Terraza' (x 2).
+AU, Node tag-pair: 'name::Semáforos ENEL Central' (x 1).
+AU, Node tag-pair: 'name::Semáforos El Eden' (x 1).
+AU, Node tag-pair: 'name::Semáforos de Ciudad Jardines' (x 1).
+AU, Node tag-pair: 'name::Semáforos de Hospital Vivian Pellas' (x 1).
+AU, Node tag-pair: 'name::Semáforos de Km 10.5 Carretera a Masaya' (x 1).
+AU, Node tag-pair: 'name::Semáforos de Plaza el Sol' (x 2).
+AU, Node tag-pair: 'name::Semáforos del Cristo Rey' (x 1).
+AU, Node tag-pair: 'name::Semáforos del Gancho de Camino' (x 1).
+AU, Node tag-pair: 'name::Semaforos La Reynaga' (x 1).
+AU, Node tag-pair: 'name::Semaforos La Tenderi' (x 2).
+AU, Node tag-pair: 'name::Semaforos Las Palmas' (x 2).
+AU, Node tag-pair: 'name::Semaforos Quinta Nina' (x 4).
+AU, Node tag-pair: 'name::Semaforos Siete Sur' (x 2).
+AU, Node tag-pair: 'name::Semaforos de La Pedro Joaquin' (x 1).
+AU, Node tag-pair: 'name::Semaforos de Linda Vista' (x 1).
+AU, Node tag-pair: 'name::Semaforos de la Ceibita' (x 1).
+AU, Node tag-pair: 'name::Semaforos del Dorado' (x 3).
+AU, Node tag-pair: 'name::Semaforos del Paraisito' (x 1).
+AU, Node tag-pair: 'name::Terminal Laureles Sur' (x 1).
+AU, Node tag-pair: 'name::Terminal Lomas de Guadalupe' (x 1).
+AU, Node tag-pair: 'name::Terminal de la 117' (x 1).
+AU, Node tag-pair: 'name::Vanegas terminal ( queserìa el chele)' (x 1).
+AU, Node tag-pair: 'name::none' (x 1).
+AU, Node tag-pair: 'name::zumen' (x 3).
+AU, Node tag-pair: 'note::The official status of this is questionable; IRTRAMMA's address does not match actual location.' (x 1).
+AU, Node tag-pair: 'note::drains runs on the East-West road' (x 1).
+AU, Node tag-pair: 'official_name::none' (x 1).
+AU, Node tag-pair: 'official_status::IRTRAMMA:bus_station' (x 18).
+AU, Node tag-pair: 'official_status::IRTRAMMA:bus_stop' (x 783).
+AU, Node tag-pair: 'official_status::none' (x 212).
+AU, Node tag-pair: 'power::tower' (x 1).
+AU, Node tag-pair: 'public_transport::platform' (x 19).
+AU, Node tag-pair: 'public_transport::station' (x 4).
+AU, Node tag-pair: 'public_transport::stop_area' (x 1).
+AU, Node tag-pair: 'public_transport::stop_position' (x 1028).
+AU, Node tag-pair: 'reference_point::yes' (x 8).
+AU, Node tag-pair: 'shelter::no' (x 2).
+AU, Node tag-pair: 'source::Bing' (x 4).
+AU, Node tag-pair: 'source::Crisvann Map Note' (x 2).
+AU, Node tag-pair: 'source::survey' (x 133).
+AU, Node tag-pair: 'source::survey; Mapillary' (x 2).
+AU, Node tag-pair: 'traffic_calming::bump' (x 39).
+AU, Node tag-pair: 'traffic_calming::dip' (x 6).
+AU, Node tag-pair: 'traffic_calming::hump' (x 1).
+AU, Node tag-pair: 'traffic_calming::rumble_strip' (x 2).
+AU, Node tag-pair: 'traffic_signals::signal' (x 1).
+AU, ------- WAYS -------
+AU, Way tag-pair: 'access::yes' (x 2).
+AU, Way tag-pair: 'alt_name::Avenida Central' (x 6).
+AU, Way tag-pair: 'alt_name::Boulevard Jean Paul Genie; Avenida Jean Paul Genie; Pista Jean Paul Jenie' (x 17).
+AU, Way tag-pair: 'alt_name::Careterra Nueva a Leon' (x 8).
+AU, Way tag-pair: 'alt_name::Carretera a Masaya' (x 10).
+AU, Way tag-pair: 'alt_name::Dupla Norte' (x 2).
+AU, Way tag-pair: 'alt_name::Panamerican Highway' (x 5).
+AU, Way tag-pair: 'alt_name::Paseo Naciones Unidas' (x 9).
+AU, Way tag-pair: 'alt_name::Paseo Republica de Chile' (x 17).
+AU, Way tag-pair: 'alt_name::Pista Suburbana 50A Calle SO' (x 4).
+AU, Way tag-pair: 'alt_name::Pista Suburbana 51A Calle SO' (x 5).
+AU, Way tag-pair: 'alt_name::Pista Suburbana España' (x 8).
+AU, Way tag-pair: 'alt_name::Puente El Eden' (x 1).
+AU, Way tag-pair: 'alt_name::Rotonda Jean-Paul Jenie' (x 5).
+AU, Way tag-pair: 'alt_name::Rotonda Plaza Inter' (x 4).
+AU, Way tag-pair: 'alt_name_1::Dupla Norte' (x 1).
+AU, Way tag-pair: 'alt_name_1::Paseo República de Chile' (x 16).
+AU, Way tag-pair: 'alt_name_1::Paseo Republica de Chile' (x 1).
+AU, Way tag-pair: 'alt_name_2::Carretera Norte' (x 3).
+AU, Way tag-pair: 'alt_name_2::Carretera Sur' (x 17).
+AU, Way tag-pair: 'bicycle::yes' (x 4).
+AU, Way tag-pair: 'boundary::administrative' (x 63).
+AU, Way tag-pair: 'bridge::yes' (x 51).
+AU, Way tag-pair: 'bridge:name::Puente Club Terraza' (x 2).
+AU, Way tag-pair: 'bridge:name::Puente León' (x 1).
+AU, Way tag-pair: 'bridge:name::Puente de Edén' (x 1).
+AU, Way tag-pair: 'cycleway::no' (x 4).
+AU, Way tag-pair: 'foot::yes' (x 4).
+AU, Way tag-pair: 'highway::construction' (x 1).
+AU, Way tag-pair: 'highway::living_street' (x 3).
+AU, Way tag-pair: 'highway::primary' (x 280).
+AU, Way tag-pair: 'highway::primary_link' (x 13).
+AU, Way tag-pair: 'highway::residential' (x 493).
+AU, Way tag-pair: 'highway::secondary' (x 375).
+AU, Way tag-pair: 'highway::secondary_link' (x 41).
+AU, Way tag-pair: 'highway::service' (x 16).
+AU, Way tag-pair: 'highway::tertiary' (x 303).
+AU, Way tag-pair: 'highway::tertiary_link' (x 11).
+AU, Way tag-pair: 'highway::trunk' (x 285).
+AU, Way tag-pair: 'highway::trunk_link' (x 36).
+AU, Way tag-pair: 'highway::unclassified' (x 114).
+AU, Way tag-pair: 'horse::yes' (x 2).
+AU, Way tag-pair: 'junction::roundabout' (x 84).
+AU, Way tag-pair: 'lanes::1' (x 5).
+AU, Way tag-pair: 'lanes::2' (x 452).
+AU, Way tag-pair: 'lanes::3' (x 39).
+AU, Way tag-pair: 'lanes::4' (x 97).
+AU, Way tag-pair: 'layer::-1' (x 5).
+AU, Way tag-pair: 'layer::1' (x 44).
+AU, Way tag-pair: 'loc_name::Calle Principal de Altamira' (x 6).
+AU, Way tag-pair: 'loc_name::Carretera a Masaya' (x 21).
+AU, Way tag-pair: 'mapanica:reviewed::no' (x 10).
+AU, Way tag-pair: 'maxspeed::30' (x 1).
+AU, Way tag-pair: 'maxspeed::40' (x 2).
+AU, Way tag-pair: 'maxspeed::60' (x 4).
+AU, Way tag-pair: 'maxspeed::80' (x 17).
+AU, Way tag-pair: 'name::(1A Avenida No)' (x 1).
+AU, Way tag-pair: 'name::12A Avenida No' (x 5).
+AU, Way tag-pair: 'name::13A Calle SE' (x 4).
+AU, Way tag-pair: 'name::18A Avenida So' (x 3).
+AU, Way tag-pair: 'name::18a Avenida SO' (x 8).
+AU, Way tag-pair: 'name::19a Avenida SO' (x 1).
+AU, Way tag-pair: 'name::1ra Calle' (x 1).
+AU, Way tag-pair: 'name::20a Avenida SO' (x 2).
+AU, Way tag-pair: 'name::21a Avenida SO' (x 1).
+AU, Way tag-pair: 'name::22a Avenida SO' (x 3).
+AU, Way tag-pair: 'name::22a Calle SO' (x 2).
+AU, Way tag-pair: 'name::23a Avenida SO' (x 7).
+AU, Way tag-pair: 'name::24a Calle SO' (x 2).
+AU, Way tag-pair: 'name::25a Avenida SO' (x 7).
+AU, Way tag-pair: 'name::25a Calle SO' (x 1).
+AU, Way tag-pair: 'name::27a Avenida SO' (x 1).
+AU, Way tag-pair: 'name::27a Calle SO' (x 4).
+AU, Way tag-pair: 'name::2A CALLE Se' (x 11).
+AU, Way tag-pair: 'name::2A Calle SE' (x 2).
+AU, Way tag-pair: 'name::30a Calle SO' (x 3).
+AU, Way tag-pair: 'name::32A Avenida Se' (x 1).
+AU, Way tag-pair: 'name::32a Calle SO' (x 1).
+AU, Way tag-pair: 'name::33a Calle SO' (x 4).
+AU, Way tag-pair: 'name::35 Avenida SO' (x 8).
+AU, Way tag-pair: 'name::35A Avenida SO' (x 10).
+AU, Way tag-pair: 'name::37a Calle SO' (x 1).
+AU, Way tag-pair: 'name::38a Calle SO' (x 1).
+AU, Way tag-pair: 'name::3A Calle So' (x 11).
+AU, Way tag-pair: 'name::40a Calle SO' (x 3).
+AU, Way tag-pair: 'name::46a Calle SO' (x 1).
+AU, Way tag-pair: 'name::52a Calle SO' (x 1).
+AU, Way tag-pair: 'name::55A Avenida NE' (x 2).
+AU, Way tag-pair: 'name::55A Avenida SE' (x 7).
+AU, Way tag-pair: 'name::5A Avenida NE' (x 3).
+AU, Way tag-pair: 'name::6A Calle No' (x 5).
+AU, Way tag-pair: 'name::Av Germon Gaitan' (x 1).
+AU, Way tag-pair: 'name::Av de Batahola' (x 4).
+AU, Way tag-pair: 'name::Avenida Bolivar (1A Avenida No)' (x 8).
+AU, Way tag-pair: 'name::Avenida Casimira Sotelo' (x 11).
+AU, Way tag-pair: 'name::Avenida Central' (x 1).
+AU, Way tag-pair: 'name::Avenida Colon' (x 8).
+AU, Way tag-pair: 'name::Avenida Germon Gaitan' (x 3).
+AU, Way tag-pair: 'name::Avenida Heroes de Batahola' (x 12).
+AU, Way tag-pair: 'name::Avenida Isidro Centeno' (x 4).
+AU, Way tag-pair: 'name::Avenida Julio Buitrago' (x 3).
+AU, Way tag-pair: 'name::Avenida Mariana Soditos' (x 1).
+AU, Way tag-pair: 'name::Avenida Martires del 1ero de Mayo' (x 12).
+AU, Way tag-pair: 'name::Avenida Miguel Angel Fornos' (x 3).
+AU, Way tag-pair: 'name::Avenida Monumental o Av William Romero' (x 5).
+AU, Way tag-pair: 'name::Avenida Principal de Altamira' (x 6).
+AU, Way tag-pair: 'name::Avenida Rio Pochote' (x 8).
+AU, Way tag-pair: 'name::Avenida Roberto Ibara' (x 2).
+AU, Way tag-pair: 'name::Avenida Roberto Vargas' (x 11).
+AU, Way tag-pair: 'name::Avenida Universitaria Casimiro Sotelo' (x 4).
+AU, Way tag-pair: 'name::Avenida William Romero' (x 1).
+AU, Way tag-pair: 'name::Avenida de Las Milicias' (x 11).
+AU, Way tag-pair: 'name::Avenida de Naciones Unidas' (x 9).
+AU, Way tag-pair: 'name::Benjamín Zeledón' (x 1).
+AU, Way tag-pair: 'name::Boulevar Ruben Dario' (x 3).
+AU, Way tag-pair: 'name::César Augusto Espinoza' (x 7).
+AU, Way tag-pair: 'name::Calle 15 de Septiembre' (x 12).
+AU, Way tag-pair: 'name::Calle 27 de Mayo' (x 6).
+AU, Way tag-pair: 'name::Calle 4 de Noviembre' (x 7).
+AU, Way tag-pair: 'name::Calle Central' (x 5).
+AU, Way tag-pair: 'name::Calle Colon' (x 9).
+AU, Way tag-pair: 'name::Calle El Triunfo (6A Calle No)' (x 12).
+AU, Way tag-pair: 'name::Calle Fajardo' (x 1).
+AU, Way tag-pair: 'name::Calle Julio Jimenez' (x 4).
+AU, Way tag-pair: 'name::Calle San Patricio' (x 3).
+AU, Way tag-pair: 'name::Calle Vista Alegre' (x 1).
+AU, Way tag-pair: 'name::Calle Xolotlán' (x 2).
+AU, Way tag-pair: 'name::Callejon de los Frijoleros' (x 1).
+AU, Way tag-pair: 'name::Camino a San Isidro de Bolas' (x 1).
+AU, Way tag-pair: 'name::Camino a Santo Domingo' (x 4).
+AU, Way tag-pair: 'name::Camino viejo a Santo Domingo' (x 14).
+AU, Way tag-pair: 'name::Carretera Masaya' (x 3).
+AU, Way tag-pair: 'name::Carretera Norte' (x 47).
+AU, Way tag-pair: 'name::Carretera Norte (Dupla Norte)' (x 25).
+AU, Way tag-pair: 'name::Carretera Sur' (x 31).
+AU, Way tag-pair: 'name::Carretera Sur - 35A Avenida SO' (x 1).
+AU, Way tag-pair: 'name::Carretera a Las Nubes' (x 5).
+AU, Way tag-pair: 'name::Carretera a Masaya' (x 7).
+AU, Way tag-pair: 'name::Cuesta de Los Martires (o del Plomo)' (x 5).
+AU, Way tag-pair: 'name::Cuesta del Plomo' (x 11).
+AU, Way tag-pair: 'name::Del Seminario' (x 7).
+AU, Way tag-pair: 'name::Diagonal de Los Martires (Rafael Bermudez)' (x 16).
+AU, Way tag-pair: 'name::Dupla Sur' (x 10).
+AU, Way tag-pair: 'name::Entrada Hospital Lenin Fonseca' (x 3).
+AU, Way tag-pair: 'name::NIC-28' (x 17).
+AU, Way tag-pair: 'name::NIC-4' (x 10).
+AU, Way tag-pair: 'name::Paseo José Martí' (x 2).
+AU, Way tag-pair: 'name::Paseo La Union Europea (Carretera Masaya)' (x 21).
+AU, Way tag-pair: 'name::Paseo Los Muchachos' (x 4).
+AU, Way tag-pair: 'name::Paseo Naciones Unidas' (x 3).
+AU, Way tag-pair: 'name::Paseo República de Chile (Carretera Sur)' (x 16).
+AU, Way tag-pair: 'name::Paseo Republica de Chile (Carretera Sur)' (x 1).
+AU, Way tag-pair: 'name::Paseo del Club' (x 1).
+AU, Way tag-pair: 'name::Paso a desnivel Rubenia' (x 2).
+AU, Way tag-pair: 'name::Pedro A Flores' (x 3).
+AU, Way tag-pair: 'name::Pista Benjamín Zeledón' (x 32).
+AU, Way tag-pair: 'name::Pista Benjamin Zelodon' (x 1).
+AU, Way tag-pair: 'name::Pista Jean Paul Genie' (x 17).
+AU, Way tag-pair: 'name::Pista Joaquim Chamorro' (x 7).
+AU, Way tag-pair: 'name::Pista La Reynaga' (x 70).
+AU, Way tag-pair: 'name::Pista Suburbana' (x 17).
+AU, Way tag-pair: 'name::Pista Suburbana 50A Calle SO' (x 1).
+AU, Way tag-pair: 'name::Pista Suburbana 51A Calle SO' (x 1).
+AU, Way tag-pair: 'name::Pista Suburbana España' (x 1).
+AU, Way tag-pair: 'name::Pista de la Resistencia' (x 66).
+AU, Way tag-pair: 'name::Pista de la Solidaridad' (x 42).
+AU, Way tag-pair: 'name::Pista de la UNAN' (x 9).
+AU, Way tag-pair: 'name::Pista la UNAN' (x 7).
+AU, Way tag-pair: 'name::Puente León - Diagonal de Los Martires (Rafael Bermudez)' (x 1).
+AU, Way tag-pair: 'name::Radial Santo Domingo' (x 12).
+AU, Way tag-pair: 'name::Rotonda Bello Horizonte' (x 6).
+AU, Way tag-pair: 'name::Rotonda Centro América' (x 12).
+AU, Way tag-pair: 'name::Rotonda El Gueguense' (x 8).
+AU, Way tag-pair: 'name::Rotonda El Periodista' (x 8).
+AU, Way tag-pair: 'name::Rotonda Hugo Chávez' (x 4).
+AU, Way tag-pair: 'name::Rotonda Jean-Paul Genie' (x 5).
+AU, Way tag-pair: 'name::Rotonda La Virgen' (x 8).
+AU, Way tag-pair: 'name::Rotonda Ruben Dario' (x 10).
+AU, Way tag-pair: 'name::Rotonda Santo Domingo' (x 8).
+AU, Way tag-pair: 'name::Rotonda Universitaria' (x 5).
+AU, Way tag-pair: 'name::Via a Estancia Santo Domingo' (x 1).
+AU, Way tag-pair: 'note::The imagery is old; there's actually an island between these two roads, hence they are two oneways.' (x 2).
+AU, Way tag-pair: 'note::There is no center isle / dual carriage way at any point of Ave Bolivar (anymore) even though it appears so in Bing imagery. The imagery is older than the avenue's upgrade.' (x 5).
+AU, Way tag-pair: 'note::bridge name from a (detached) node nxt to bridge' (x 1).
+AU, Way tag-pair: 'old_name::Avenida Jerusalem' (x 6).
+AU, Way tag-pair: 'old_name::Avenida Monumental' (x 9).
+AU, Way tag-pair: 'old_name::Paseo Naciones Unidas' (x 21).
+AU, Way tag-pair: 'old_name::Plaza Inter' (x 4).
+AU, Way tag-pair: 'oneway::no' (x 49).
+AU, Way tag-pair: 'oneway::no9' (x 1).
+AU, Way tag-pair: 'oneway::yes' (x 826).
+AU, Way tag-pair: 'ref::1' (x 3).
+AU, Way tag-pair: 'ref::28' (x 17).
+AU, Way tag-pair: 'ref::35A' (x 2).
+AU, Way tag-pair: 'ref::4' (x 41).
+AU, Way tag-pair: 'ref::NIC-1' (x 56).
+AU, Way tag-pair: 'reference_point::major' (x 1).
+AU, Way tag-pair: 'reference_point::yes' (x 5).
+AU, Way tag-pair: 'short_name::Pista JP Genie' (x 17).
+AU, Way tag-pair: 'sidewalk::both' (x 4).
+AU, Way tag-pair: 'smoothness::good' (x 2).
+AU, Way tag-pair: 'source::Bing' (x 227).
+AU, Way tag-pair: 'source::Bing; survey' (x 6).
+AU, Way tag-pair: 'source::survey' (x 193).
+AU, Way tag-pair: 'source::survey; Bing' (x 92).
+AU, Way tag-pair: 'source::survey;Bing' (x 2).
+AU, Way tag-pair: 'source:geometry::Bing' (x 16).
+AU, Way tag-pair: 'source:name::Busto Jose Marti' (x 2).
+AU, Way tag-pair: 'source:name::Stone sign in southern end of the paseo' (x 21).
+AU, Way tag-pair: 'source:old_name::Stone sign at Pista Suburbana crossing' (x 6).
+AU, Way tag-pair: 'supervised::paved' (x 1).
+AU, Way tag-pair: 'surface::asphalt' (x 174).
+AU, Way tag-pair: 'surface::cobblestone' (x 2).
+AU, Way tag-pair: 'surface::concrete' (x 11).
+AU, Way tag-pair: 'surface::dirt' (x 6).
+AU, Way tag-pair: 'surface::earth' (x 1).
+AU, Way tag-pair: 'surface::paved' (x 821).
+AU, Way tag-pair: 'surface::paving_stones' (x 29).
+AU, Way tag-pair: 'surface::unpaved' (x 19).
+AU, Way tag-pair: 'tracktype::grade1' (x 17).
+AU, Way tag-pair: 'tunnel::culvert' (x 2).
+AU, Way tag-pair: 'turn:lanes::through|through|right' (x 1).
+AU, Way tag-pair: 'waterway::stream' (x 1).
+AU, Way tag-pair: 'width::8' (x 17).
+AU, ------- RELATIONS -------
+AU, Relation type-role-pair: 'node::' (x 5595).
+AU, Relation type-role-pair: 'node::platform' (x 825).
+AU, Relation type-role-pair: 'node::stop' (x 1048).
+AU, Relation type-role-pair: 'way::' (x 8836).
+AU, Relation type-role-pair: 'way::backward' (x 1).
+AU, Relation tag-pair: 'from::Altos de Motastepe' (x 1).
+AU, Relation tag-pair: 'from::Barrio Acahualinca' (x 2).
+AU, Relation tag-pair: 'from::Barrio Arnoldo Alemán' (x 1).
+AU, Relation tag-pair: 'from::Barrio Batahola' (x 1).
+AU, Relation tag-pair: 'from::Barrio Camilo Chamorro, Managua' (x 1).
+AU, Relation tag-pair: 'from::Barrio Enrique Lorente' (x 1).
+AU, Relation tag-pair: 'from::Barrio Francisco Salazar' (x 1).
+AU, Relation tag-pair: 'from::Barrio Jose Dolores Estrada' (x 1).
+AU, Relation tag-pair: 'from::Barrio Laureles Norte' (x 1).
+AU, Relation tag-pair: 'from::Barrio Naciones Unidas' (x 1).
+AU, Relation tag-pair: 'from::Barrio San Isidro' (x 1).
+AU, Relation tag-pair: 'from::Barrio San Judas' (x 1).
+AU, Relation tag-pair: 'from::Barrio San Luis Norte' (x 1).
+AU, Relation tag-pair: 'from::Camilo Ortega' (x 4).
+AU, Relation tag-pair: 'from::Catedral' (x 1).
+AU, Relation tag-pair: 'from::Colonia Independencia, Managua' (x 1).
+AU, Relation tag-pair: 'from::Colonia Miguel Bonilla' (x 1).
+AU, Relation tag-pair: 'from::Comarca Los Vanegas' (x 1).
+AU, Relation tag-pair: 'from::Costado Noreste INATEC' (x 1).
+AU, Relation tag-pair: 'from::Costado Sur Colonia Miguel Bonilla' (x 1).
+AU, Relation tag-pair: 'from::Costado noreste Villa Fraternidad' (x 1).
+AU, Relation tag-pair: 'from::Cuesta El Plomo' (x 1).
+AU, Relation tag-pair: 'from::Cuidad Sandino' (x 5).
+AU, Relation tag-pair: 'from::El Seminario' (x 1).
+AU, Relation tag-pair: 'from::Estadio Nacional' (x 1).
+AU, Relation tag-pair: 'from::Hialeath' (x 1).
+AU, Relation tag-pair: 'from::La Refinería' (x 1).
+AU, Relation tag-pair: 'from::Las Américas 2' (x 1).
+AU, Relation tag-pair: 'from::Las Brisas' (x 2).
+AU, Relation tag-pair: 'from::Las Brisas - Hospital Lenin Fonseca' (x 1).
+AU, Relation tag-pair: 'from::Laureles Norte' (x 1).
+AU, Relation tag-pair: 'from::Laureles Sur' (x 1).
+AU, Relation tag-pair: 'from::Lomas de Guadalupe' (x 1).
+AU, Relation tag-pair: 'from::Los Vanegas' (x 1).
+AU, Relation tag-pair: 'from::Memorial Sandino' (x 1).
+AU, Relation tag-pair: 'from::Mercadito, Ciudad Sandino' (x 1).
+AU, Relation tag-pair: 'from::Mercado Israel Lewites' (x 1).
+AU, Relation tag-pair: 'from::Mercado Iván Montenegro' (x 1).
+AU, Relation tag-pair: 'from::Mercado Mayoreo' (x 6).
+AU, Relation tag-pair: 'from::Mercado Oriental' (x 11).
+AU, Relation tag-pair: 'from::Mercado Oriental, Managua' (x 1).
+AU, Relation tag-pair: 'from::Mercado Roberto Huembes' (x 2).
+AU, Relation tag-pair: 'from::Milagro de Dios' (x 1).
+AU, Relation tag-pair: 'from::Parque Central' (x 1).
+AU, Relation tag-pair: 'from::Reparto Shicki' (x 1).
+AU, Relation tag-pair: 'from::Rotonda Rubén Darío' (x 1).
+AU, Relation tag-pair: 'from::Sabana Grande' (x 1).
+AU, Relation tag-pair: 'from::San Isidro De La Cruz Verde' (x 1).
+AU, Relation tag-pair: 'from::Semáforos Seminario' (x 1).
+AU, Relation tag-pair: 'from::Semáforos Seminario 50m al Este' (x 1).
+AU, Relation tag-pair: 'from::Terminal Cuesta el plomo' (x 1).
+AU, Relation tag-pair: 'from::Terminal Villa José Benito Escobar' (x 1).
+AU, Relation tag-pair: 'from::Terminal Villa Libertad' (x 1).
+AU, Relation tag-pair: 'from::Unidad de Propósito' (x 1).
+AU, Relation tag-pair: 'from::Villa Cuba' (x 1).
+AU, Relation tag-pair: 'from::Villa Libertad' (x 3).
+AU, Relation tag-pair: 'from::Villa Roma' (x 1).
+AU, Relation tag-pair: 'from::Villa Soberana, Ciudad Sandino' (x 1).
+AU, Relation tag-pair: 'from::Vistas de Esquipulas' (x 1).
+AU, Relation tag-pair: 'from::Zona Franca Las Mercedes' (x 2).
+AU, Relation tag-pair: 'from::Zona Franca Shun Woo (Cafe Soluble)' (x 1).
+AU, Relation tag-pair: 'name::6: Barrio Camilo Chamorro, Managua =&gt; Colonia Independencia, Managua' (x 1).
+AU, Relation tag-pair: 'name::6: Colonia Independencia, Managua =&gt; Barrio Camilo Chamorro, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 101: Las Brisas, Managua =&gt; Mercado Mayoreo, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 101: Mercado Mayoreo, Managua =&gt; Las Brisas, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 102: Barrio Acahualinca, Managua =&gt; Mercado Mayoreo, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 102: Mayoreo, Managua =&gt; Acahualinca, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 103: Cuesta El Plomo, Managua =&gt; Laureles Sur, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 103: Laureles Sur, Managua =&gt; Cuesta El Plomo, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 104: Hialeath, Managua =&gt; Mercado Mayoreo, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 104: Mayoreo, Managua =&gt; Barrio Hialeah' (x 1).
+AU, Relation tag-pair: 'name::Bus 105: Camilo Ortega, Managua =&gt; Unidad de Propósito, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 105: Unidad de Propósito, Managua =&gt; Camilo Ortega, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 106: El Seminario, Managua =&gt; Zona Franca Shun Woo (Cafe Soluble), Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 106: Zona Franca Shun Woo (Cafe Soluble), Managua =&gt; El Seminario, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 107: Camilo Ortega, Managua =&gt; Mercado Oriental, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 107: Mercado Oriental, Managua =&gt; Camilo Ortega, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 108: Barrio Enrique Lorente =&gt; Barrio José Dolores Estrada' (x 1).
+AU, Relation tag-pair: 'name::Bus 108: Barrio Jose Dolores Estrada =&gt; Barrio Enrique Lorente' (x 1).
+AU, Relation tag-pair: 'name::Bus 109: Las Brisas, Managua =&gt; Reparto Schick , Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 109: Reparto Schick, Managua =&gt; Las Brisas, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 110: Mercado Mayoreo, Managua =&gt; Semáforos Seminario 50m al Este, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 110: Semáforos Seminario 50m al Este, Managua =&gt; Mercado Mayoreo, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 111: Barrio Laureles Norte, Managua =&gt; Colonia Miguel Bonilla, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 111: Colonia Miguel Bonilla, Managua =&gt; Los Laureles Norte, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 112: Colonia Independencia, Managua =&gt; Villa Libertad, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 112: Villa Libertad, Managua =&gt; Colonia Independencia, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 113: Ciudad Sandino =&gt; Mercado Oriental, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 113: Mercado Oriental, Managua =&gt; Ciudad Sandino' (x 1).
+AU, Relation tag-pair: 'name::Bus 114: La Refinería, Managua =&gt; Las Américas 2, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 114: Las Américas 2, Managua =&gt; La Refinería, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 115: Ciudad Sandino =&gt; Mercado Oriental, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 115: Mercado Oriental, Managua =&gt; Ciudad Sandino' (x 1).
+AU, Relation tag-pair: 'name::Bus 116: Semáforos Seminario, Managua =&gt; Villa Libertad, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 116: Villa Libertad Managua =&gt; Barrio Miraflores, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 117: Costado Norte Villa José B. Escobar,Managua =&gt; Rotonda Rubén Darío, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 117: Rotonda Rubén Darío, Managua =&gt; Costado Norte Villa José B. Escobar,Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 118: Las Brisas, Managua =&gt; Laureles Sur, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 118: Laureles Sur, Managua =&gt; Las Brisas, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 119: Costado Noreste Villa Fraternidad, Managua =&gt; Cuesta El Plomo, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 119: Cuesta El Plomo, Managua =&gt; Villa Fraternidad, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 120: Barrio Batahola, Managua =&gt; Mercado Mayoreo, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 120: Mercado Mayoreo, Managua =&gt; Barrio Batahola, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 123: Barrio San Judas, Managua =&gt; Mercado Roberto Huembes, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 123: Mercado Roberto Huembes, Managua =&gt; Barrio San Judas, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 125: Altos de Motastepe =&gt; Mercadito, Ciudad Sandino' (x 1).
+AU, Relation tag-pair: 'name::Bus 125: Ciudad Sandino =&gt; Mercado Oriental' (x 1).
+AU, Relation tag-pair: 'name::Bus 125: Mercadito, Ciudad Sandino =&gt; Altos de Motastepe' (x 1).
+AU, Relation tag-pair: 'name::Bus 125: Mercado Oriental =&gt; Ciudad Sandino' (x 1).
+AU, Relation tag-pair: 'name::Bus 133: Ciudad Sandino =&gt; Mercado Oriental, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 133: Mercado Oriental, Managua =&gt; Ciudad Sandino' (x 1).
+AU, Relation tag-pair: 'name::Bus 154: Camilo Ortega, Managua =&gt; Iván Montenegro, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 154: Mercado Iván Montenegro, Managua =&gt; Barrio Camilo Ortega, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 158: Camilo Ortega, Managua =&gt; Mercado Oriental, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 158: Mercado Oriental, Managua =&gt; Camilo Ortega, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 159: Barrio Acahualinca, Managua =&gt; Mercado Mayoreo, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 159: Mercado Mayoreo, Managua =&gt; Barrio Acahualinca, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 163: Mercado Oriental, Managua =&gt; Sabana Grande, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 163: Sabana Grande, Managua =&gt; Mercado Oriental, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 164: Estado Nacional, Managua =&gt; Villa Cuba, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 164: Villa Cuba, Managua =&gt; Estadio Nacional, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 165: Barrio Naciones Unidas, Managua =&gt; Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 165: Barrio San Luis Norte, Managua =&gt; Barrio Naciones Unidas, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 167: Barrio Arnoldo Alemán, Managua =&gt; Mercado Israel Lewites, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 167: Mercado Israel Lewites, Managua =&gt; Barrio Arnoldo Alemán, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 168: Costado Sur Colonia Miguel Bonilla, Managua =&gt; Lomas de Guadalupe, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 168: Lomas de Guadalupe, Managua =&gt; Costado Sur Colonia Miguel Bonilla, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 169: Barrio Francisco Salazar, Managua =&gt; Zona Franca Las Mercedes, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 169: Zona Franca Las Mercedes, Managua =&gt; Barrio Francisco Salazar, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 170: Las Américas 2, Managua =&gt; Mercado Oriental' (x 1).
+AU, Relation tag-pair: 'name::Bus 170: Mercado Oriental, Managua =&gt; Villa José Benito Escobar, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 172: Ciudad Sandino =&gt; Mercado Oriental, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 172: Mercado Oriental, Managua =&gt; Ciudad Sandino' (x 1).
+AU, Relation tag-pair: 'name::Bus 175: Laureles Norte =&gt; Memorial Sandino' (x 1).
+AU, Relation tag-pair: 'name::Bus 175: Memorial Sandino =&gt; Laureles Norte' (x 1).
+AU, Relation tag-pair: 'name::Bus 195: Avenida Bolívar, Managua =&gt; Parque Milagro de Dios, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 195: Barrio Milagro de Dios, Managua =&gt; Avenida Bolívar, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 210: Catedral, Managua =&gt; Villa Nueva, Ciudad Sandino' (x 1).
+AU, Relation tag-pair: 'name::Bus 210: Villa Soberana, Ciudad Sandino =&gt; Metrocentro, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 261 (MR4): Costado Este Barrio Santa Rosa, Managua =&gt;Villa Roma, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 261 (MR4): Villa Roma, Managua =&gt; Costado Este Barrio Santa Rosa, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 262: Comarca Los Vanegas, Managua =&gt; Costado Noreste INATEC, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 262: Costado Noreste INATEC, Managua =&gt;Comarca Los Vanegas,Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 266: Mercado Oriental, Managua =&gt; Zona Franca Las Mercedes, Managua' (x 1).
+AU, Relation tag-pair: 'name::Bus 266: Zona Franca Las Mercedes, Managua =&gt; Mercado Oriental, Managua' (x 1).
+AU, Relation tag-pair: 'name::Los Vanegas: Los Vanegas, Managua =&gt; Mercado Oriental, Managua' (x 1).
+AU, Relation tag-pair: 'name::Los Vanegas: Mercado Oriental, Managua =&gt; Los Vanegas, Managua' (x 1).
+AU, Relation tag-pair: 'name::Ruta Mercado Roberto Huembes, Santo Domingo y Esquipulas: Mercado Roberto Huembes, Managua =&gt; Vistas de Esquipulas, Managua' (x 1).
+AU, Relation tag-pair: 'name::Ruta Mercado Roberto Huembes, Santo Domingo y Esquipulas: Vistas de Esquipulas, Managua =&gt; Mercado Roberto Huembes, Managua' (x 1).
+AU, Relation tag-pair: 'name::San Isidro: Mercado Oriental, Managua =&gt; San Isidro, Managua' (x 1).
+AU, Relation tag-pair: 'name::San Isidro: San Isidro, Managua =&gt; Mercado Oriental, Managua' (x 1).
+AU, Relation tag-pair: 'network::IRTRAMMA' (x 90).
+AU, Relation tag-pair: 'official_name::Claro Villa Fontana' (x 1).
+AU, Relation tag-pair: 'official_name::Terminal Costado Sur Parque Colonia Independencia' (x 1).
+AU, Relation tag-pair: 'operator::21 de enero' (x 2).
+AU, Relation tag-pair: 'operator::Cooperativa 17 de octubre' (x 2).
+AU, Relation tag-pair: 'operator::Cooperativa 21 de Enero' (x 3).
+AU, Relation tag-pair: 'operator::Cooperativa 21de Enero' (x 1).
+AU, Relation tag-pair: 'operator::Cooperativa 22 de Octubre' (x 2).
+AU, Relation tag-pair: 'operator::Cooperativa Andrés Castro' (x 2).
+AU, Relation tag-pair: 'operator::Cooperativa Camilo Chamorro y Empresa Nuevo Amanecer' (x 1).
+AU, Relation tag-pair: 'operator::Cooperativa Camilo Ortega' (x 4).
+AU, Relation tag-pair: 'operator::Cooperativa Camilo Sotelo' (x 4).
+AU, Relation tag-pair: 'operator::Cooperativa Colón' (x 6).
+AU, Relation tag-pair: 'operator::Cooperativa Las Jagüitas' (x 2).
+AU, Relation tag-pair: 'operator::Cooperativa Los Vanegas' (x 2).
+AU, Relation tag-pair: 'operator::Cooperativa Omar Baca' (x 1).
+AU, Relation tag-pair: 'operator::Cooperativa Parrales Vallejos' (x 4).
+AU, Relation tag-pair: 'operator::Cooperativa Ricardo Morales Avilés' (x 2).
+AU, Relation tag-pair: 'operator::Cooperativa TINCONSAN' (x 2).
+AU, Relation tag-pair: 'operator::Cooperativa Urbano Unitario R.L.' (x 2).
+AU, Relation tag-pair: 'operator::Cooperativa de Transporte Unidos y Cooperativa Unitarios' (x 2).
+AU, Relation tag-pair: 'operator::Parrales Vallejos' (x 2).
+AU, Relation tag-pair: 'operator::Samuel Mairena Green' (x 2).
+AU, Relation tag-pair: 'operator::Villa Nueva' (x 1).
+AU, Relation tag-pair: 'operator::unknown' (x 2).
+AU, Relation tag-pair: 'public_transport:version::1' (x 2).
+AU, Relation tag-pair: 'public_transport:version::2' (x 85).
+AU, Relation tag-pair: 'ref::101' (x 2).
+AU, Relation tag-pair: 'ref::102' (x 2).
+AU, Relation tag-pair: 'ref::103' (x 2).
+AU, Relation tag-pair: 'ref::104' (x 2).
+AU, Relation tag-pair: 'ref::105' (x 2).
+AU, Relation tag-pair: 'ref::106' (x 2).
+AU, Relation tag-pair: 'ref::107' (x 2).
+AU, Relation tag-pair: 'ref::108' (x 2).
+AU, Relation tag-pair: 'ref::109' (x 2).
+AU, Relation tag-pair: 'ref::110' (x 2).
+AU, Relation tag-pair: 'ref::111' (x 2).
+AU, Relation tag-pair: 'ref::112' (x 2).
+AU, Relation tag-pair: 'ref::113' (x 2).
+AU, Relation tag-pair: 'ref::114' (x 2).
+AU, Relation tag-pair: 'ref::115' (x 2).
+AU, Relation tag-pair: 'ref::116' (x 2).
+AU, Relation tag-pair: 'ref::117' (x 2).
+AU, Relation tag-pair: 'ref::118' (x 2).
+AU, Relation tag-pair: 'ref::119' (x 2).
+AU, Relation tag-pair: 'ref::120' (x 2).
+AU, Relation tag-pair: 'ref::123' (x 2).
+AU, Relation tag-pair: 'ref::125' (x 2).
+AU, Relation tag-pair: 'ref::125 (CS)' (x 2).
+AU, Relation tag-pair: 'ref::133' (x 2).
+AU, Relation tag-pair: 'ref::154' (x 2).
+AU, Relation tag-pair: 'ref::158' (x 2).
+AU, Relation tag-pair: 'ref::159' (x 2).
+AU, Relation tag-pair: 'ref::163' (x 2).
+AU, Relation tag-pair: 'ref::164' (x 2).
+AU, Relation tag-pair: 'ref::165' (x 2).
+AU, Relation tag-pair: 'ref::167' (x 2).
+AU, Relation tag-pair: 'ref::168' (x 2).
+AU, Relation tag-pair: 'ref::169' (x 2).
+AU, Relation tag-pair: 'ref::170' (x 2).
+AU, Relation tag-pair: 'ref::172' (x 2).
+AU, Relation tag-pair: 'ref::175' (x 2).
+AU, Relation tag-pair: 'ref::195' (x 2).
+AU, Relation tag-pair: 'ref::210' (x 2).
+AU, Relation tag-pair: 'ref::261 (MR4)' (x 2).
+AU, Relation tag-pair: 'ref::262' (x 2).
+AU, Relation tag-pair: 'ref::266' (x 2).
+AU, Relation tag-pair: 'ref::6' (x 2).
+AU, Relation tag-pair: 'ref::Esquipulas' (x 2).
+AU, Relation tag-pair: 'ref::San Isidro' (x 2).
+AU, Relation tag-pair: 'ref::Vanegas' (x 2).
+AU, Relation tag-pair: 'route::bus' (x 90).
+AU, Relation tag-pair: 'state::connection' (x 2).
+AU, Relation tag-pair: 'to::Acahualinca' (x 1).
+AU, Relation tag-pair: 'to::Altos de Motastepe' (x 1).
+AU, Relation tag-pair: 'to::Avenida Bolívar' (x 1).
+AU, Relation tag-pair: 'to::Barrio Acahualinca' (x 1).
+AU, Relation tag-pair: 'to::Barrio Arnoldo Alemán' (x 1).
+AU, Relation tag-pair: 'to::Barrio Camilo Chamorro, Managua' (x 1).
+AU, Relation tag-pair: 'to::Barrio Camilo Ortega' (x 1).
+AU, Relation tag-pair: 'to::Barrio Enrique Lorente' (x 1).
+AU, Relation tag-pair: 'to::Barrio Hialeah' (x 1).
+AU, Relation tag-pair: 'to::Barrio José Dolores Estrada' (x 1).
+AU, Relation tag-pair: 'to::Barrio San Judas' (x 1).
+AU, Relation tag-pair: 'to::Barrio San Luis Norte' (x 2).
+AU, Relation tag-pair: 'to::Barrio Santa Rosa' (x 1).
+AU, Relation tag-pair: 'to::Barro Francisco Salazar' (x 1).
+AU, Relation tag-pair: 'to::Batahola' (x 1).
+AU, Relation tag-pair: 'to::Camilo Ortega' (x 3).
+AU, Relation tag-pair: 'to::Ciudad Sandino' (x 4).
+AU, Relation tag-pair: 'to::Colonia Independencia' (x 2).
+AU, Relation tag-pair: 'to::Colonia Independencia, Managua' (x 1).
+AU, Relation tag-pair: 'to::Colonia Miguel Bonilla' (x 1).
+AU, Relation tag-pair: 'to::Comarca Los Vanegas' (x 1).
+AU, Relation tag-pair: 'to::Costado Noreste INATEC' (x 1).
+AU, Relation tag-pair: 'to::Costado Sur Colonia Miguel Bonilla' (x 1).
+AU, Relation tag-pair: 'to::Costado Sureste Villa Libertad' (x 1).
+AU, Relation tag-pair: 'to::Cuesta El Plomo' (x 1).
+AU, Relation tag-pair: 'to::Cuidad Sandino' (x 1).
+AU, Relation tag-pair: 'to::El Seminario' (x 1).
+AU, Relation tag-pair: 'to::Estadio Nacional' (x 1).
+AU, Relation tag-pair: 'to::La Refinería' (x 1).
+AU, Relation tag-pair: 'to::Las Américas 2' (x 1).
+AU, Relation tag-pair: 'to::Las Brisas' (x 3).
+AU, Relation tag-pair: 'to::Laureles Norte' (x 1).
+AU, Relation tag-pair: 'to::Laureles Sur' (x 1).
+AU, Relation tag-pair: 'to::Lomas de Guadalupe' (x 1).
+AU, Relation tag-pair: 'to::Los Laureles Norte' (x 1).
+AU, Relation tag-pair: 'to::Los Vanegas' (x 1).
+AU, Relation tag-pair: 'to::Memorial Sandino' (x 1).
+AU, Relation tag-pair: 'to::Mercadito, Ciudad Sandino' (x 1).
+AU, Relation tag-pair: 'to::Mercado Israel Lewites' (x 1).
+AU, Relation tag-pair: 'to::Mercado Iván Montenegro' (x 1).
+AU, Relation tag-pair: 'to::Mercado Mayoreo' (x 6).
+AU, Relation tag-pair: 'to::Mercado Oriental' (x 13).
+AU, Relation tag-pair: 'to::Mercado Roberto Huembes' (x 2).
+AU, Relation tag-pair: 'to::Metrocentro, Managua' (x 1).
+AU, Relation tag-pair: 'to::Milagro de Dios' (x 1).
+AU, Relation tag-pair: 'to::Reparto Schick - Colegio Enrique de Osó' (x 1).
+AU, Relation tag-pair: 'to::Rotonda Rubén Darío' (x 1).
+AU, Relation tag-pair: 'to::Sabana grande' (x 1).
+AU, Relation tag-pair: 'to::San Isidro De La Cruz Verde' (x 1).
+AU, Relation tag-pair: 'to::Semáforos Seminario 50m al Este' (x 2).
+AU, Relation tag-pair: 'to::Terminal Cuesta el plomo' (x 1).
+AU, Relation tag-pair: 'to::Terminal Villa José Benito Escobar' (x 1).
+AU, Relation tag-pair: 'to::Unidad de Propósito' (x 1).
+AU, Relation tag-pair: 'to::Villa Cuba' (x 1).
+AU, Relation tag-pair: 'to::Villa Fraternidad' (x 1).
+AU, Relation tag-pair: 'to::Villa José Benito Escobar' (x 1).
+AU, Relation tag-pair: 'to::Villa Libertad' (x 1).
+AU, Relation tag-pair: 'to::Villa Roma' (x 1).
+AU, Relation tag-pair: 'to::Vistas de Esquipulas' (x 1).
+AU, Relation tag-pair: 'to::Zona Franca Las Mercedes' (x 2).
+AU, Relation tag-pair: 'to::Zona Franca Shun Woo (Cafe Soluble)' (x 1).
+AU, Relation tag-pair: 'type::route' (x 90).
