@@ -20,6 +20,7 @@
 		2C85307D1C92170B000D68BA /* tlali-osm.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C85307B1C92170B000D68BA /* tlali-osm.h */; };
 		2C85307E1C922489000D68BA /* rutas-tests-main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2C8530721C9211DD000D68BA /* rutas-tests-main.cpp */; };
 		2C8530821C92253B000D68BA /* libauframework-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8530811C92253B000D68BA /* libauframework-osx.a */; };
+		2C8530841C93296D000D68BA /* AUOsmDatabaseDefs.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C8530831C93296D000D68BA /* AUOsmDatabaseDefs.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,6 +51,7 @@
 		2C85307B1C92170B000D68BA /* tlali-osm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "tlali-osm.h"; path = "../../../src/lib-tlali-osm/tlali-osm.h"; sourceTree = SOURCE_ROOT; };
 		2C85307F1C92252D000D68BA /* readme.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = readme.txt; path = "../../../../lib-auframework/readme.txt"; sourceTree = "<group>"; };
 		2C8530811C92253B000D68BA /* libauframework-osx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libauframework-osx.a"; path = "../../../../lib-auframework/lib/libauframework-osx.a"; sourceTree = "<group>"; };
+		2C8530831C93296D000D68BA /* AUOsmDatabaseDefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AUOsmDatabaseDefs.h; path = "../../../include/rutas-core/AUOsmDatabaseDefs.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,10 +116,11 @@
 		2C8530001C90CF5C000D68BA /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				2C8530831C93296D000D68BA /* AUOsmDatabaseDefs.h */,
 				2C85306A1C921181000D68BA /* AUOsmDatabase.h */,
 				2C8530661C921181000D68BA /* AUOsmDatabase.cpp */,
-				2C8530651C921181000D68BA /* AUOsmDatabaseAnalyzer.cpp */,
 				2C8530691C921181000D68BA /* AUOsmDatabaseAnalyzer.h */,
+				2C8530651C921181000D68BA /* AUOsmDatabaseAnalyzer.cpp */,
 				2C8530441C90E3F6000D68BA /* lib-tlali-osm */,
 			);
 			name = Data;
@@ -168,6 +171,7 @@
 				2C8530701C921181000D68BA /* AUOsmDatabaseAnalyzer.h in Headers */,
 				2C85306F1C921181000D68BA /* rutas-core-register.h in Headers */,
 				2C85307D1C92170B000D68BA /* tlali-osm.h in Headers */,
+				2C8530841C93296D000D68BA /* AUOsmDatabaseDefs.h in Headers */,
 				2C85306E1C921181000D68BA /* rutas-core.h in Headers */,
 				2C8530711C921181000D68BA /* AUOsmDatabase.h in Headers */,
 			);

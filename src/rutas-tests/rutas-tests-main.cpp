@@ -19,19 +19,19 @@ int main(int argc, const char * argv[]) {
 								 1, (1024 * 1024 * (1.1f)), 512);
 	NBGestorArchivos::inicializar();
 	//Analyze all posible parameters combinations on nodes/ways/relations
-	if(!AUOsmDatabaseAnalyzer::analyzePrintAllPosibleValuesPairs("./rutasManagua.xml")){
+	/*if(!AUOsmDatabaseAnalyzer::analyzePrintAllPosibleValuesPairs("./rutasManagua.xml")){
 		NBASSERT(false)
 	} else {
-		
-	}
+		//
+	}*/
 	//Test loading "AUOsmDatabase"
-	/*AUOsmDatabase* osmDb = new(ENMemoriaTipo_General) AUOsmDatabase();
+	AUOsmDatabase* osmDb = new(ENMemoriaTipo_General) AUOsmDatabase();
 	if(!osmDb->loadFromFileXml("./rutasManagua.xml")){
 		NBASSERT(false)
 	} else {
 		//
 	}
-	osmDb->liberar();*/
+	osmDb->liberar();
 	//
 	PRINTF_INFO("End-of-program.\n");
 	NBGestorArchivos::finalizar();
