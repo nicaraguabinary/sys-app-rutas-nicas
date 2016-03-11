@@ -1,0 +1,23 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+#endif
+
+#include "rutas-app-core-pch.h"
+#include "rutas-app-core-head.h"
+#include "rutas-app-core.h"
+
+#define AU_INICIO_PANTALLA_VERTICAL		false	//indica si la pantalla se carga en vertical u horizontal
+#define AU_USA_ACELEROMETRO
+
+#define LEER_PRECACHE					false	//Archivos binarios generados como parte del paquete
+#define LEER_CACHE						false	//Archivos binarios generados durante una carga anterior y almacenados en la carpeta cache/tmp
+#define ESCRIBIR_CACHE					false	//Archivos binarios generados durante una carga anterior y almacenados en la carpeta cache/tmp
+#define PAQUETES_RUTA_BASE				""
+#define PAQUETES_CARGAR					true
+#define PAQUETES_CARGAR_PRECACHEADOS	false

@@ -25,6 +25,20 @@ AUOsmDatabase::~AUOsmDatabase(void){
 
 //
 
+const AUArregloNativoOrdenadoP<STOsmDbNode>* AUOsmDatabase::getNodes() const {
+	return _nodes;
+}
+
+const AUArregloNativoOrdenadoP<STOsmDbWay>* AUOsmDatabase::getWays() const {
+	return _ways;
+}
+
+const AUArregloNativoOrdenadoP<STOsmDbRoute>* AUOsmDatabase::getRoutes() const {
+	return _routes;
+}
+
+//
+
 void AUOsmDatabase::empty(){
 	//Release routes
 	{
@@ -158,7 +172,7 @@ bool AUOsmDatabase::loadFromFileXml(const char* filePath){
 															} else {
 																//PRINTF_INFO("  Ignoring node member role: '%s'.\n", member.role);
 															}
-															newRoute.nodes->agregarElemento(routeNode);
+															newRoute.nodesRefs->agregarElemento(routeNode);
 														}
 													}
 												}
@@ -180,7 +194,7 @@ bool AUOsmDatabase::loadFromFileXml(const char* filePath){
 															if(AUCadena8::cadenasSonIguales(member.role, "backward")){
 																routeWay.type = ENOsmDbMemWayType_backward;
 															}
-															newRoute.ways->agregarElemento(routeWay);
+															newRoute.waysRefs->agregarElemento(routeWay);
 														}
 													}
 												}
@@ -430,8 +444,8 @@ void AUOsmDatabase::STOsmDbWay_release(STOsmDbWay* obj){
 void AUOsmDatabase::STOsmDbRoute_init(STOsmDbRoute* obj, AUObjeto* parent){
 	obj->id			= 0;
 	//Members
-	obj->nodes		= new(parent) AUArregloNativoMutableP<STOsmDbRouteNode>();
-	obj->ways		= new(parent) AUArregloNativoMutableP<STOsmDbRouteWay>();
+	obj->nodesRefs	= new(parent) AUArregloNativoMutableP<STOsmDbRouteNode>();
+	obj->waysRefs	= new(parent) AUArregloNativoMutableP<STOsmDbRouteWay>();
 	//Optionals (from tags)
 	obj->network	= NULL;		//Relation tag-pair: 'network = str'
 	obj->refName	= NULL;		//Relation tag-pair: 'ref = str'
@@ -444,8 +458,8 @@ void AUOsmDatabase::STOsmDbRoute_init(STOsmDbRoute* obj, AUObjeto* parent){
 void AUOsmDatabase::STOsmDbRoute_release(STOsmDbRoute* obj){
 	obj->id			= 0;
 	//Members
-	if(obj->nodes != NULL) obj->nodes->liberar(); obj->nodes = NULL;
-	if(obj->ways != NULL) obj->ways->liberar(); obj->ways = NULL;
+	if(obj->nodesRefs != NULL) obj->nodesRefs->liberar(); obj->nodesRefs = NULL;
+	if(obj->waysRefs != NULL) obj->waysRefs->liberar(); obj->waysRefs = NULL;
 	//Optionals (from tags)
 	if(obj->network != NULL) obj->network->liberar(); obj->network = NULL;
 	if(obj->refName != NULL) obj->refName->liberar(); obj->refName = NULL;

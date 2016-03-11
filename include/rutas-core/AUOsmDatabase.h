@@ -11,6 +11,10 @@ class AUOsmDatabase : public AUObjeto {
 		void	empty();
 		bool	loadFromFileXml(const char* filePath);
 		//
+		const AUArregloNativoOrdenadoP<STOsmDbNode>*	getNodes() const;
+		const AUArregloNativoOrdenadoP<STOsmDbWay>*		getWays() const;
+		const AUArregloNativoOrdenadoP<STOsmDbRoute>*	getRoutes() const;
+		//
 		AUOBJMETODOS_CLASESID_DEFINICION
 		AUOBJMETODOS_CLASESNOMBRES_DEFINICION
 		AUOBJMETODOS_CLONAR_DEFINICION

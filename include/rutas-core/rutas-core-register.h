@@ -13,6 +13,6 @@
 #	error "Missing include. Macro NB_METODO_INICIALIZADOR_DEF is not defined yet!"
 #endif
 
-NB_METODO_INICIALIZADOR_DEF(AppRutasNicaCoreRegister, NB_PRIORIDAD_CONSTRUCTOR_REGISTRADOR);
+NB_METODO_INICIALIZADOR_DEF(rutas_core_register, NB_PRIORIDAD_CONSTRUCTOR_REGISTRADOR);
 
 #endif

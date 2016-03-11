@@ -144,8 +144,8 @@ typedef struct STOsmDbRouteWay_ {
 typedef struct STOsmDbRoute_ {
 	SI64	id;
 	//Members
-	AUArregloNativoMutableP<STOsmDbRouteNode>* nodes;
-	AUArregloNativoMutableP<STOsmDbRouteWay>* ways;
+	AUArregloNativoMutableP<STOsmDbRouteNode>* nodesRefs;
+	AUArregloNativoMutableP<STOsmDbRouteWay>* waysRefs;
 	//Optionals (from tags)
 	AUCadena8*			network;		//Relation tag-pair: 'network = str'
 	AUCadena8*			refName;		//Relation tag-pair: 'ref = str'
