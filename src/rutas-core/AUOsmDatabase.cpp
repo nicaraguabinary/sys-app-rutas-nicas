@@ -114,6 +114,7 @@ bool AUOsmDatabase::loadFromFileXml(const char* filePath){
 							if(this->_routes->indiceDe(srchRoute) == -1){
 								STOsmDbRoute newRoute;
 								AUOsmDatabase::STOsmDbRoute_init(&newRoute, this);
+								newRoute.id = data.id;
 								//Read tags
 								{
 									STTlaTag tag;
@@ -256,6 +257,7 @@ void AUOsmDatabase::privAddWay(void* osmData, void* wayData){
 	STTlaWay* way = (STTlaWay*)wayData;
 	STOsmDbWay newWay;
 	STOsmDbWay_init(&newWay, this);
+	newWay.id = way->id;
 	//Read nodes ref
 	{
 		const TlaSI64* arr; TlaSI32 count;

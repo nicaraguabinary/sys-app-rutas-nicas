@@ -37,6 +37,7 @@ AUSceneMap::AUSceneMap(const SI32 iEscena, IListenerScenes* scenes) : AUAppEscen
 	}
 	//
 	_routesVisual	= new(this) AUArregloNativoOrdenadoMutableP<STSceneMapRoute>();
+	_waysVisual		= new(this) AUArregloNativoOrdenadoMutableP<STSceneMapWay>();
 	_nodesVisual	= new(this) AUArregloNativoOrdenadoMutableP<STSceneMapNode>();
 	//
 	_routesDb		= new(this) AUOsmDatabase();
@@ -45,39 +46,90 @@ AUSceneMap::AUSceneMap(const SI32 iEscena, IListenerScenes* scenes) : AUAppEscen
 	} else {
 		PRINTF_INFO("Success, osm-xml-file loaded.\n");
 		//
-		const AUArregloNativoOrdenadoP<STOsmDbNode>* nodes = _routesDb->getNodes();
-		//const AUArregloNativoOrdenadoP<STOsmDbWay>* ways = _routesDb->getWays();
-		const AUArregloNativoOrdenadoP<STOsmDbRoute>* routes = _routesDb->getRoutes();
+		const AUArregloNativoOrdenadoP<STOsmDbNode>* nodes		= _routesDb->getNodes();
+		const AUArregloNativoOrdenadoP<STOsmDbWay>* ways		= _routesDb->getWays();
+		const AUArregloNativoOrdenadoP<STOsmDbRoute>* routes	= _routesDb->getRoutes();
 		//Load nodes as visual objects
-		{
+		/*{
 			SI32 i; const SI32 count = nodes->conteo;
 			for(i = 0; i < count; i++){
 				const STOsmDbNode* node = nodes->elemPtr(i);
 				STSceneMapNode newNode;
 				STSceneMapNode_init(&newNode, this);
+				newNode.id = node->id;
 				newNode.marker->establecerTraslacion(node->lon * MAP_SCALE, node->lat * MAP_SCALE);
 				_layerMap->agregarObjetoEscena(newNode.layer);
+				_nodesVisual->agregarElemento(newNode);
 			}
-			
+		}*/
+		//Load ways as visual objects
+		{
+			SI32 i; const SI32 count = ways->conteo;
+			for(i = 0; i < count; i++){
+				const STOsmDbWay* wayRef = ways->elemPtr(i);
+				STOsmDbWay srch;
+				srch.id = wayRef->id;
+				const SI32 iFound = ways->indiceDe(srch);
+				if(iFound == -1){
+					PRINTF_ERROR("Way %lld is missing.\n", srch.id);
+					NBASSERT(0)
+				} else {
+					PRINTF_INFO("Way %lld found!\n", srch.id);
+					const STOsmDbWay* way = ways->elemPtr(iFound);
+					STSceneMapWay newWay;
+					STSceneMapWay_init(&newWay, this);
+					newWay.id = way->id;
+					//Build new way by nodes
+					{
+						SI32 i; const SI32 count = way->nodes->conteo;
+						for(i = 0; i < count; i++){
+							STOsmDbNode srchNode;
+							srchNode.id = way->nodes->elem(i);
+							const SI32 iFound = nodes->indiceDe(srchNode);
+							if(iFound == -1){
+								PRINTF_ERROR("Node %lld is missing.\n", srchNode.id);
+								NBASSERT(0)
+							} else {
+								const STOsmDbNode* node = nodes->elemPtr(iFound);
+								NBASSERT(node->lon != 0.0 && node->lat != 0.0)
+								newWay.nodesPath->agregarCoordenadaLocal(node->lon * MAP_SCALE, node->lat * MAP_SCALE);
+							}
+						}
+						//Remove if there's not enough nodes to build a lines-secuence
+						const SI32 nodesCount = newWay.nodesPath->puntosLocales()->conteo;
+						if(nodesCount < 2){
+							PRINTF_WARNING("Just %d nodes.\n", newWay.nodesPath->puntosLocales()->conteo);
+							STSceneMapWay_release(&newWay);
+						} else {
+							//PRINTF_INFO("OK %d nodes on route.\n", newWay.nodesPath->puntosLocales()->conteo);
+							if(nodesCount < 3) newWay.nodesPath->establecerTipo(ENEscenaFiguraTipo_Linea);
+							newWay.layer->agregarObjetoEscena(newWay.nodesPath);
+							_layerMap->agregarObjetoEscena(newWay.layer);
+							_waysVisual->agregarElemento(newWay);
+						}
+					}
+				}
+			}
 		}
 		//Load routes as visual objects
-		/*{
+		{
 			SI32 i; const SI32 count = routes->conteo;
 			for(i = 0; i < count; i++){
 				const STOsmDbRoute* route = routes->elemPtr(i);
 				STSceneMapRoute newRoute;
 				STSceneMapRoute_init(&newRoute, this);
+				newRoute.id = route->id;
 				//Build secuense of lines, using nodes
-				{
+				/*{
 					SI32 i; const SI32 count = route->nodesRefs->conteo;
 					for(i = 0; i < count; i++){
 						const STOsmDbRouteNode* nodeRef = route->nodesRefs->elemPtr(i);
-						STOsmDbNode srchNode;
-						srchNode.id = nodeRef->id;
-						const SI32 iFound = nodes->indiceDe(srchNode);
-						if(iFound != -1){
-							PRINTF_ERROR("Node %lld is missing.\n", nodeRef->id);
-							//NBASSERT(0)
+						STOsmDbNode srch;
+						srch.id = nodeRef->id;
+						const SI32 iFound = nodes->indiceDe(srch);
+						if(iFound == -1){
+							PRINTF_ERROR("Node %lld is missing.\n", srch.id);
+							NBASSERT(0)
 						} else {
 							const STOsmDbNode* node = nodes->elemPtr(iFound);
 							NBASSERT(node->lon != 0.0 && node->lat != 0.0)
@@ -85,20 +137,37 @@ AUSceneMap::AUSceneMap(const SI32 iEscena, IListenerScenes* scenes) : AUAppEscen
 						}
 					}
 					//Remove if there's not enough nodes to build a lines-secuence
-					if(newRoute.nodesPath->puntosLocales()->conteo < 3){
+					if(newRoute.nodesPath->puntosLocales()->conteo < 2){
 						PRINTF_WARNING("Just %d nodes.\n", newRoute.nodesPath->puntosLocales()->conteo);
-						AUEscenaContenedor* parent = (AUEscenaContenedor*)newRoute.nodesPath->contenedor();
-						if(parent != NULL) parent->quitarObjetoEscena(newRoute.nodesPath);
-						newRoute.nodesPath->liberar();
-						newRoute.nodesPath = NULL;
+						NBASSERT(newRoute.nodesPath->contenedor() == NULL)
 					} else {
 						PRINTF_INFO("OK %d nodes on route.\n", newRoute.nodesPath->puntosLocales()->conteo);
+						if(nodesCount < 3) newRoute.nodesPath->establecerTipo(ENEscenaFiguraTipo_Linea);
+						newRoute.layer->agregarObjetoEscena(newRoute.nodesPath);
+					}
+				}*/
+				//Build secuense of lines, using ways
+				{
+					SI32 i; const SI32 count = route->waysRefs->conteo;
+					for(i = 0; i < count; i++){
+						const STOsmDbRouteWay* wayRef = route->waysRefs->elemPtr(i);
+						STOsmDbWay srch;
+						srch.id = wayRef->id;
+						const SI32 iFound = ways->indiceDe(srch);
+						if(iFound == -1){
+							PRINTF_ERROR("Way %lld is missing.\n", srch.id);
+							NBASSERT(0)
+						} else {
+							PRINTF_INFO("Way %lld found!\n", srch.id);
+							newRoute.waysIds->agregarElemento(srch.id);
+						}
 					}
 				}
 				//
 				_layerMap->agregarObjetoEscena(newRoute.layer);
+				_routesVisual->agregarElemento(newRoute);
 			}
-		}*/
+		}
 	}
 	//
 	{
@@ -117,6 +186,7 @@ AUSceneMap::~AUSceneMap(){
 	//
 	this->privEmpty();
 	if(_routesVisual != NULL) { NBASSERT(_routesVisual->conteo == 0) _routesVisual->liberar(); _routesVisual = NULL; }
+	if(_waysVisual != NULL) { NBASSERT(_waysVisual->conteo == 0) _waysVisual->liberar(); _waysVisual = NULL; }
 	if(_nodesVisual != NULL) { NBASSERT(_nodesVisual->conteo == 0) _nodesVisual->liberar(); _nodesVisual = NULL; }
 	if(_routesDb != NULL) _routesDb->liberar(NB_RETENEDOR_THIS); _routesDb = NULL;
 	//
@@ -136,25 +206,24 @@ void AUSceneMap::privEmpty(){
 		SI32 i; const SI32 count = _routesVisual->conteo;
 		for(i = 0; i < count; i++){
 			STSceneMapRoute* itm = _routesVisual->elemPtr(i);
-			//Remove from scene
-			AUEscenaContenedor* parent;
-			parent = (AUEscenaContenedor*) itm->layer->contenedor();
-			if(parent != NULL) parent->quitarObjetoEscena(itm->layer);
-			//
 			STSceneMapRoute_release(itm);
 		}
 		_routesVisual->vaciar();
+	}
+	//Release ways
+	{
+		SI32 i; const SI32 count = _waysVisual->conteo;
+		for(i = 0; i < count; i++){
+			STSceneMapWay* itm = _waysVisual->elemPtr(i);
+			STSceneMapWay_release(itm);
+		}
+		_waysVisual->vaciar();
 	}
 	//Release nodes
 	{
 		SI32 i; const SI32 count = _nodesVisual->conteo;
 		for(i = 0; i < count; i++){
 			STSceneMapNode* itm = _nodesVisual->elemPtr(i);
-			//Remove from scene
-			AUEscenaContenedor* parent;
-			parent = (AUEscenaContenedor*) itm->layer->contenedor();
-			if(parent != NULL) parent->quitarObjetoEscena(itm->layer);
-			//
 			STSceneMapNode_release(itm);
 		}
 		_routesVisual->vaciar();
@@ -180,7 +249,7 @@ void AUSceneMap::privValidateMapTranslation(const float xDelta, const float yDel
 		pos.y = layerBox.yMax - mapBox.yMax;
 	}
 	_layerMap->establecerTraslacion(pos);
-	PRINTF_INFO("Traslation (%f, %f).\n", pos.x, pos.y);
+	//PRINTF_INFO("Traslation (%f, %f).\n", pos.x, pos.y);
 }
 
 //
@@ -198,21 +267,48 @@ void AUSceneMap::STSceneMapNode_init(STSceneMapNode* obj, AUObjeto* parent){
 
 void AUSceneMap::STSceneMapNode_release(STSceneMapNode* obj){
 	obj->id = 0;
-	if(obj->layer != NULL) obj->layer->liberar(); obj->layer = NULL;
+	if(obj->layer != NULL){
+		AUEscenaContenedor* parent = (AUEscenaContenedor*)obj->layer->contenedor();
+		if(parent != NULL) parent->quitarObjetoEscena(obj->layer);
+		obj->layer->liberar();
+		obj->layer = NULL;
+	}
 	if(obj->marker != NULL) obj->marker->liberar(); obj->marker = NULL;
 }
 
-void AUSceneMap::STSceneMapRoute_init(STSceneMapRoute* obj, AUObjeto* parent){
+void AUSceneMap::STSceneMapWay_init(STSceneMapWay* obj, AUObjeto* parent){
 	obj->id = 0;
 	obj->layer = new(parent) AUEscenaContenedor();
 	obj->nodesPath = new(parent) AUEscenaFigura(ENEscenaFiguraTipo_SecuenciaLineas);
 	obj->layer->agregarObjetoEscena(obj->nodesPath);
 }
 
+void AUSceneMap::STSceneMapWay_release(STSceneMapWay* obj){
+	obj->id = 0;
+	if(obj->layer != NULL){
+		AUEscenaContenedor* parent = (AUEscenaContenedor*)obj->layer->contenedor();
+		if(parent != NULL) parent->quitarObjetoEscena(obj->layer);
+		obj->layer->liberar();
+		obj->layer = NULL;
+	}
+	if(obj->nodesPath != NULL) obj->nodesPath->liberar(); obj->nodesPath = NULL;
+}
+
+void AUSceneMap::STSceneMapRoute_init(STSceneMapRoute* obj, AUObjeto* parent){
+	obj->id = 0;
+	obj->layer = new(parent) AUEscenaContenedor();
+	obj->waysIds = new(parent) AUArregloNativoMutableP<SI64>();
+}
+
 void AUSceneMap::STSceneMapRoute_release(STSceneMapRoute* obj){
 	obj->id = 0;
-	if(obj->layer != NULL) obj->layer->liberar(); obj->layer = NULL;
-	if(obj->nodesPath != NULL) obj->nodesPath->liberar(); obj->nodesPath = NULL;
+	if(obj->layer != NULL){
+		AUEscenaContenedor* parent = (AUEscenaContenedor*)obj->layer->contenedor();
+		if(parent != NULL) parent->quitarObjetoEscena(obj->layer);
+		obj->layer->liberar();
+		obj->layer = NULL;
+	}
+	if(obj->waysIds != NULL) obj->waysIds->liberar(); obj->waysIds = NULL;
 }
 
 //

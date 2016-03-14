@@ -25,10 +25,23 @@ typedef struct STSceneMapNode_ {
 	bool operator>=(const struct STSceneMapNode_ &other) const { return (id >= other.id); }
 } STSceneMapNode;
 
-typedef struct STSceneMapRoute_ {
+typedef struct STSceneMapWay_ {
 	SI64				id;
 	AUEscenaContenedor*	layer;
 	AUEscenaFigura*		nodesPath;
+	//
+	bool operator==(const struct STSceneMapWay_ &other) const { return (id == other.id); }
+	bool operator!=(const struct STSceneMapWay_ &other) const { return (id != other.id); }
+	bool operator<(const struct STSceneMapWay_ &other) const { return (id < other.id); }
+	bool operator<=(const struct STSceneMapWay_ &other) const { return (id <= other.id); }
+	bool operator>(const struct STSceneMapWay_ &other) const { return (id > other.id); }
+	bool operator>=(const struct STSceneMapWay_ &other) const { return (id >= other.id); }
+} STSceneMapWay;
+
+typedef struct STSceneMapRoute_ {
+	SI64				id;
+	AUEscenaContenedor*	layer;
+	AUArregloNativoMutableP<SI64>* waysIds;
 	//
 	bool operator==(const struct STSceneMapRoute_ &other) const { return (id == other.id); }
 	bool operator!=(const struct STSceneMapRoute_ &other) const { return (id != other.id); }
@@ -84,8 +97,9 @@ class AUSceneMap: public AUAppEscena, public IEscuchadorCambioPuertoVision, publ
 		AUEscenaContenedor*	_layerMap;
 		//
 		AUOsmDatabase*		_routesDb;
-		AUArregloNativoOrdenadoMutableP<STSceneMapRoute>* _routesVisual;
-		AUArregloNativoOrdenadoMutableP<STSceneMapNode>* _nodesVisual;
+		AUArregloNativoOrdenadoMutableP<STSceneMapRoute>*	_routesVisual;
+		AUArregloNativoOrdenadoMutableP<STSceneMapWay>*		_waysVisual;
+		AUArregloNativoOrdenadoMutableP<STSceneMapNode>*	_nodesVisual;
 		//
 		void				privOrganizarContenido(const bool notificarCambioAltura);
 		void				privEmpty();
@@ -93,6 +107,8 @@ class AUSceneMap: public AUAppEscena, public IEscuchadorCambioPuertoVision, publ
 		//
 		static void			STSceneMapNode_init(STSceneMapNode* obj, AUObjeto* parent);
 		static void			STSceneMapNode_release(STSceneMapNode* obj);
+		static void			STSceneMapWay_init(STSceneMapWay* obj, AUObjeto* parent);
+		static void			STSceneMapWay_release(STSceneMapWay* obj);
 		static void			STSceneMapRoute_init(STSceneMapRoute* obj, AUObjeto* parent);
 		static void			STSceneMapRoute_release(STSceneMapRoute* obj);
 };
