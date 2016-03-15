@@ -2,6 +2,7 @@
 #include "AUFrameworkBaseStdAfx.h"
 #include "AUOsmDatabaseAnalyzer.h"
 #include "tlali-osm.h"
+#include "NBGestorArchivos.h"
 
 AUOsmDatabaseAnalyzer::AUOsmDatabaseAnalyzer() : AUObjeto() {
 	AU_GESTOR_PILA_LLAMADAS_PUSH("AUOsmDatabaseAnalyzer::AUOsmDatabaseAnalyzer")
@@ -70,18 +71,25 @@ SI32 AUOsmDatabaseAnalyzer::privIndexForStr(STOsmDbSortedStrs* dst, const AUCade
 	return r;
 }
 
+TlaSI32 AUOsmDatabaseAnalyzer_ReadFromAUFileFunc(void* dstBuffer, const TlaSI32 sizeOfBlock, const TlaSI32 maxBlocksToRead, void* userData){
+	return ((AUArchivo*)userData)->leer(dstBuffer, sizeOfBlock, maxBlocksToRead, (AUArchivo*)userData);
+}
 
+TlaSI32 AUOsmDatabaseAnalyzer_WriteToAUFileFunc(const void* srcBuffer, const TlaSI32 sizeOfBlock, const TlaSI32 maxBlocksToWrite, void* userData){
+	return ((AUArchivo*)userData)->escribir(srcBuffer, sizeOfBlock, maxBlocksToWrite, (AUArchivo*)userData);
+}
 
 bool AUOsmDatabaseAnalyzer::analyzePrintAllPosibleValuesPairs(const char* filePath) {
 	AU_GESTOR_PILA_LLAMADAS_PUSH("AUOsmDatabaseAnalyzer::analyzePrintAllPosibleValuesPairs")
 	bool r = false;
 	STTlaOsm osmFromXml;
 	osmInit(&osmFromXml);
-	FILE* stream = fopen(filePath, "rb");
+	AUArchivo* stream = NBGestorArchivos::flujoDeArchivo(ENMemoriaTipo_Temporal, filePath, ENArchivoModo_SoloLectura);
 	if(stream == NULL){
 		NBASSERT(0);
 	} else {
-		if(!osmLoadFromFileXml(&osmFromXml, stream)){
+		stream->lock();
+		if(!osmLoadFromXmlStream(&osmFromXml, AUOsmDatabaseAnalyzer_ReadFromAUFileFunc, stream)){
 			NBASSERT(0);
 		} else {
 			//Walk nodes
@@ -245,7 +253,8 @@ bool AUOsmDatabaseAnalyzer::analyzePrintAllPosibleValuesPairs(const char* filePa
 			}
 			r = true;
 		}
-		fclose(stream);
+		stream->unlock();
+		stream->cerrar();
 	}
 	osmRelease(&osmFromXml);
 	AU_GESTOR_PILA_LLAMADAS_POP

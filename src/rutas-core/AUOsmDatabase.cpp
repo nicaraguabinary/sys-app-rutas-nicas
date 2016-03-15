@@ -3,6 +3,7 @@
 #include "AUOsmDatabase.h"
 #include "tlali-osm.h"
 #include "AUNumerico.h"
+#include "NBGestorArchivos.h"
 
 AUOsmDatabase::AUOsmDatabase() : AUObjeto() {
 	AU_GESTOR_PILA_LLAMADAS_PUSH("AUOsmDatabase::AUOsmDatabase")
@@ -69,16 +70,25 @@ void AUOsmDatabase::empty(){
 	}
 }
 
+TlaSI32 AUOsmDatabase_ReadFromAUFileFunc(void* dstBuffer, const TlaSI32 sizeOfBlock, const TlaSI32 maxBlocksToRead, void* userData){
+	return ((AUArchivo*)userData)->leer(dstBuffer, sizeOfBlock, maxBlocksToRead, (AUArchivo*)userData);
+}
+
+TlaSI32 AUOsmDatabase_WriteToAUFileFunc(const void* srcBuffer, const TlaSI32 sizeOfBlock, const TlaSI32 maxBlocksToWrite, void* userData){
+	return ((AUArchivo*)userData)->escribir(srcBuffer, sizeOfBlock, maxBlocksToWrite, (AUArchivo*)userData);
+}
+
 bool AUOsmDatabase::loadFromFileXml(const char* filePath){
 	AU_GESTOR_PILA_LLAMADAS_PUSH("AUOsmDatabase::loadFromFileXml")
 	bool r = false;
 	STTlaOsm osmFromXml;
 	osmInit(&osmFromXml);
-	FILE* stream = fopen(filePath, "rb");
+	AUArchivo* stream = NBGestorArchivos::flujoDeArchivo(ENMemoriaTipo_Temporal, filePath, ENArchivoModo_SoloLectura);
 	if(stream == NULL){
 		NBASSERT(0);
 	} else {
-		if(!osmLoadFromFileXml(&osmFromXml, stream)){
+		stream->lock();
+		if(!osmLoadFromXmlStream(&osmFromXml, AUOsmDatabase_ReadFromAUFileFunc, stream)){
 			NBASSERT(0);
 		} else {
 			this->empty();
@@ -214,7 +224,8 @@ bool AUOsmDatabase::loadFromFileXml(const char* filePath){
 			PRINTF_INFO("Xml loaded (%d routes, %d ways, %d nodes).\n", this->_routes->conteo, this->_ways->conteo, this->_nodes->conteo);
 			r = true;
 		}
-		fclose(stream);
+		stream->unlock();
+		stream->cerrar();
 	}
 	osmRelease(&osmFromXml);
 	AU_GESTOR_PILA_LLAMADAS_POP

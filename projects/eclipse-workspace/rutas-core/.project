@@ -68,12 +68,12 @@
 		<link>
 			<name>src/Data/lib-tlali-osm/tlali-osm.c</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-3-PROJECT_LOC%7D/src/lib-tlali-osm/tlali-osm.c</locationURI>
+			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/lib-tlali-openstreetmap/lib-tlali-openstreetmap/src/tlali-osm.c</locationURI>
 		</link>
 		<link>
 			<name>src/Data/lib-tlali-osm/tlali-osm.h</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-3-PROJECT_LOC%7D/src/lib-tlali-osm/tlali-osm.h</locationURI>
+			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/lib-tlali-openstreetmap/lib-tlali-openstreetmap/include/tlali-osm.h</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>
